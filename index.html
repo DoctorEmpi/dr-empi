@@ -3,91 +3,145 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dr Empi — All links</title>
-  <meta name="description" content="Instagram, Threads, TikTok, LinkedIn, YouTube, Facebook, and X for Dr Empi." />
+  <title>Dr Empi</title>
+  <meta name="description" content="Medicine, chess, rap, and writing. All of Dr Empi’s links." />
+  <meta name="theme-color" content="#071018" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #0c1220;
-      --card: #161e30;
-      --text: #f4f7fb;
-      --muted: #9aa6bd;
-      --line: #2a3550;
-      --accent: #3d8bfd;
+      --bg: #071018;
+      --ink: #f3efe6;
+      --muted: #a7b0bb;
+      --card: rgba(255,255,255,.045);
+      --line: rgba(255,255,255,.1);
+      --gold: #e4c27a;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       min-height: 100vh;
-      font-family: Inter, Segoe UI, system-ui, sans-serif;
+      color: var(--ink);
+      font-family: Outfit, system-ui, sans-serif;
       background:
-        radial-gradient(900px 500px at 50% -10%, #1c3d73 0%, transparent 60%),
+        radial-gradient(700px 420px at 80% -10%, rgba(228,194,122,.18), transparent 55%),
+        radial-gradient(600px 380px at 0% 20%, rgba(70,130,170,.18), transparent 50%),
         var(--bg);
-      color: var(--text);
+    }
+    .wrap {
+      width: min(460px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 48px 0 64px;
+    }
+    header { text-align: center; margin-bottom: 28px; }
+    .photo {
+      width: 112px;
+      height: 112px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 18%;
+      display: block;
+      border: 2px solid rgba(228,194,122,.7);
+      box-shadow: 0 16px 40px rgba(0,0,0,.4);
+    }
+    h1 {
+      margin: 0;
+      font-family: Fraunces, serif;
+      font-size: 40px;
+      font-weight: 560;
+      letter-spacing: -0.04em;
+    }
+    .role {
+      margin: 8px 0 0;
+      color: var(--gold);
+      font-size: 13px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .bio {
+      margin: 12px auto 0;
+      max-width: 32ch;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    nav { display: grid; gap: 10px; }
+    a.row {
       display: flex;
-      justify-content: center;
-      padding: 40px 16px 64px;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: inherit;
+      padding: 13px 14px;
+      border-radius: 18px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+      transition: transform .16s ease, border-color .16s ease, background .16s ease;
     }
-    main { width: min(440px, 100%); }
-    .profile { text-align: center; margin-bottom: 28px; }
-    .avatar {
-      width: 92px; height: 92px; border-radius: 50%;
-      margin: 0 auto 14px;
-      display: grid; place-items: center;
-      background: linear-gradient(145deg, #3d8bfd, #7c5cff);
-      font-weight: 700; font-size: 28px; letter-spacing: 0.04em;
-      box-shadow: 0 10px 30px rgba(61, 139, 253, 0.35);
+    a.row:hover, a.row:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(228,194,122,.45);
+      background: rgba(255,255,255,.07);
     }
-    h1 { margin: 0; font-size: 28px; letter-spacing: -0.03em; }
-    p { margin: 8px 0 0; color: var(--muted); font-size: 15px; }
-    a.link {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 12px; text-decoration: none; color: var(--text);
-      background: var(--card); border: 1px solid var(--line);
-      border-radius: 16px; padding: 16px 18px; margin: 10px 0;
-      font-weight: 600; transition: transform .15s ease, border-color .15s ease;
+    .icon {
+      width: 42px; height: 42px; border-radius: 13px;
+      display: grid; place-items: center; flex: none;
     }
-    a.link:hover { transform: translateY(-2px); border-color: var(--accent); }
-    .name { display: flex; align-items: center; gap: 12px; }
-    .dot {
-      width: 36px; height: 36px; border-radius: 10px;
-      display: grid; place-items: center; font-size: 13px; font-weight: 700;
-      background: #243049;
+    .icon svg { width: 20px; height: 20px; fill: #fff; }
+    .copy { display: flex; flex-direction: column; min-width: 0; }
+    .copy strong { font-weight: 600; font-size: 16px; }
+    .copy span { color: var(--muted); font-size: 13px; }
+    .go { margin-left: auto; color: var(--muted); font-size: 18px; }
+    footer {
+      margin-top: 26px;
+      text-align: center;
+      color: #6f7986;
+      font-size: 12px;
+      letter-spacing: .04em;
     }
-    .arrow { color: var(--muted); }
-    footer { text-align: center; color: var(--muted); font-size: 12px; margin-top: 22px; }
   </style>
 </head>
 <body>
-  <main>
-    <div class="profile">
-      <div class="avatar">DE</div>
+  <main class="wrap">
+    <header>
+      <img class="photo" src="Picture7-edited.jpg" alt="Dr Empi" />
       <h1>Dr Empi</h1>
-      <p>Medicine, writing, chess, and music. Pick a platform.</p>
-    </div>
-
-    <a class="link" href="https://www.instagram.com/dr_empi" target="_blank" rel="noopener">
-      <span class="name"><span class="dot">IG</span> Instagram</span><span class="arrow">→</span>
-    </a>
-    <a class="link" href="https://www.threads.com/@dr_empi" target="_blank" rel="noopener">
-      <span class="name"><span class="dot">Th</span> Threads</span><span class="arrow">→</span>
-    </a>
-    <a class="link" href="https://www.tiktok.com/@dr_empi" target="_blank" rel="noopener">
-      <span class="name"><span class="dot">Tk</span> TikTok</span><span class="arrow">→</span>
-    </a>
-    <a class="link" href="https://www.linkedin.com/in/paul-michael-651425201" target="_blank" rel="noopener">
-      <span class="name"><span class="dot">in</span> LinkedIn</span><span class="arrow">→</span>
-    </a>
-    <a class="link" href="https://youtube.com/@drempi3735" target="_blank" rel="noopener">
-      <span class="name"><span class="dot">YT</span> YouTube</span><span class="arrow">→</span>
-    </a>
-    <a class="link" href="https://www.facebook.com/share/19edBNZaeK/" target="_blank" rel="noopener">
-      <span class="name"><span class="dot">Fb</span> Facebook</span><span class="arrow">→</span>
-    </a>
-    <a class="link" href="https://x.com/doctor_empi" target="_blank" rel="noopener">
-      <span class="name"><span class="dot">X</span> X</span><span class="arrow">→</span>
-    </a>
-
-    <footer>Dr Empi · one link for every bio</footer>
+      <p class="role">Medicine · Chess · Rap</p>
+      <p class="bio">Michael Paul. Writing, music, and medicine — pick a place to follow.</p>
+    </header>
+    <nav>
+      <a class="row" href="https://www.instagram.com/dr_empi" target="_blank" rel="noopener">
+        <span class="icon" style="background:#e1306c"><svg viewBox="0 0 24 24"><path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2zm0 1.6A2.2 2.2 0 1 0 14.2 12 2.2 2.2 0 0 0 12 9.8zM17.4 6.4a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/></svg></span>
+        <span class="copy"><strong>Instagram</strong><span>@dr_empi</span></span><span class="go">→</span>
+      </a>
+      <a class="row" href="https://www.threads.com/@dr_empi" target="_blank" rel="noopener">
+        <span class="icon" style="background:#111"><svg viewBox="0 0 24 24"><path d="M15.6 11.3c-.2-1.4-1-2.5-2.4-3.1 1-.7 1.6-1.7 1.5-3-.1-2-1.8-3.2-4.1-3.2-2.6 0-4.4 1.5-4.6 3.8h2.2c.1-1 .9-1.8 2.3-1.8 1.2 0 2 .6 2 1.6s-.7 1.6-2.2 1.6h-.7v1.9h.8c1.8 0 2.7.7 2.8 2-.2 1.5-1.4 2.3-3.3 2.3-1.7 0-2.8-.9-3-2.3H5c.3 2.6 2.3 4.3 5.3 4.3 3.3 0 5.5-1.9 5.3-4.9zM9.4 16.7c.2 1.1 1.1 1.7 2.4 1.7 1.6 0 2.6-.9 2.7-2.3H12c-1.1 0-1.9.2-2.6.6z"/></svg></span>
+        <span class="copy"><strong>Threads</strong><span>@dr_empi</span></span><span class="go">→</span>
+      </a>
+      <a class="row" href="https://www.tiktok.com/@dr_empi" target="_blank" rel="noopener">
+        <span class="icon" style="background:#111"><svg viewBox="0 0 24 24"><path d="M14 4c.4 2.4 1.8 4 4.2 4.3v2.3a6.6 6.6 0 0 1-4.1-1.4v6.3a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v2.5a3.2 3.2 0 1 0 2.2 3V4z"/></svg></span>
+        <span class="copy"><strong>TikTok</strong><span>@dr_empi</span></span><span class="go">→</span>
+      </a>
+      <a class="row" href="https://www.linkedin.com/in/paul-michael-651425201" target="_blank" rel="noopener">
+        <span class="icon" style="background:#0a66c2"><svg viewBox="0 0 24 24"><path d="M6.5 9H4V20h2.5zM5.2 4A1.6 1.6 0 1 0 5.2 7.2 1.6 1.6 0 0 0 5.2 4zM20 20h-2.5v-5.6c0-1.6-.6-2.6-2-2.6a2.1 2.1 0 0 0-2 1.4 2.7 2.7 0 0 0-.1.9V20H11V9h2.4v1.5a3.4 3.4 0 0 1 3-1.7c2.2 0 3.6 1.4 3.6 4.5z"/></svg></span>
+        <span class="copy"><strong>LinkedIn</strong><span>Paul Michael</span></span><span class="go">→</span>
+      </a>
+      <a class="row" href="https://youtube.com/@drempi3735" target="_blank" rel="noopener">
+        <span class="icon" style="background:#ff0033"><svg viewBox="0 0 24 24"><path d="M22 12.2s0-3.2-.4-4.6a3 3 0 0 0-2.1-2.1C17.9 5 12 5 12 5s-5.9 0-7.5.5a3 3 0 0 0-2.1 2.1C2 9 2 12.2 2 12.2s0 3.2.4 4.6a3 3 0 0 0 2.1 2.1C6.1 19.4 12 19.4 12 19.4s5.9 0 7.5-.5a3 3 0 0 0 2.1-2.1c.4-1.4.4-4.6.4-4.6zM10 15.5v-6.6l5.2 3.3z"/></svg></span>
+        <span class="copy"><strong>YouTube</strong><span>@drempi3735</span></span><span class="go">→</span>
+      </a>
+      <a class="row" href="https://www.facebook.com/share/19edBNZaeK/" target="_blank" rel="noopener">
+        <span class="icon" style="background:#1877f2"><svg viewBox="0 0 24 24"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h2.6l.4-3H13v-2c0-.6.4-1 1-1z"/></svg></span>
+        <span class="copy"><strong>Facebook</strong><span>Dr Empi</span></span><span class="go">→</span>
+      </a>
+      <a class="row" href="https://x.com/doctor_empi" target="_blank" rel="noopener">
+        <span class="icon" style="background:#111"><svg viewBox="0 0 24 24"><path d="M4 4h3.2l4.1 5.6L16.2 4H20l-6.3 7.2L20.4 20h-3.2l-4.5-6.1L7.6 20H4l6.7-7.6z"/></svg></span>
+        <span class="copy"><strong>X</strong><span>@doctor_empi</span></span><span class="go">→</span>
+      </a>
+    </nav>
+    <footer>Dr Empi</footer>
   </main>
 </body>
 </html>
