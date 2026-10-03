@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dr Empi — All links</title>
+  <meta name="description" content="Instagram, Threads, TikTok, LinkedIn, YouTube, Facebook, and X for Dr Empi." />
+  <style>
+    :root {
+      --bg: #0c1220;
+      --card: #161e30;
+      --text: #f4f7fb;
+      --muted: #9aa6bd;
+      --line: #2a3550;
+      --accent: #3d8bfd;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, Segoe UI, system-ui, sans-serif;
+      background:
+        radial-gradient(900px 500px at 50% -10%, #1c3d73 0%, transparent 60%),
+        var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      padding: 40px 16px 64px;
+    }
+    main { width: min(440px, 100%); }
+    .profile { text-align: center; margin-bottom: 28px; }
+    .avatar {
+      width: 92px; height: 92px; border-radius: 50%;
+      margin: 0 auto 14px;
+      display: grid; place-items: center;
+      background: linear-gradient(145deg, #3d8bfd, #7c5cff);
+      font-weight: 700; font-size: 28px; letter-spacing: 0.04em;
+      box-shadow: 0 10px 30px rgba(61, 139, 253, 0.35);
+    }
+    h1 { margin: 0; font-size: 28px; letter-spacing: -0.03em; }
+    p { margin: 8px 0 0; color: var(--muted); font-size: 15px; }
+    a.link {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; text-decoration: none; color: var(--text);
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: 16px; padding: 16px 18px; margin: 10px 0;
+      font-weight: 600; transition: transform .15s ease, border-color .15s ease;
+    }
+    a.link:hover { transform: translateY(-2px); border-color: var(--accent); }
+    .name { display: flex; align-items: center; gap: 12px; }
+    .dot {
+      width: 36px; height: 36px; border-radius: 10px;
+      display: grid; place-items: center; font-size: 13px; font-weight: 700;
+      background: #243049;
+    }
+    .arrow { color: var(--muted); }
+    footer { text-align: center; color: var(--muted); font-size: 12px; margin-top: 22px; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="profile">
+      <div class="avatar">DE</div>
+      <h1>Dr Empi</h1>
+      <p>Medicine, writing, chess, and music. Pick a platform.</p>
+    </div>
+
+    <a class="link" href="https://www.instagram.com/dr_empi" target="_blank" rel="noopener">
+      <span class="name"><span class="dot">IG</span> Instagram</span><span class="arrow">→</span>
+    </a>
+    <a class="link" href="https://www.threads.com/@dr_empi" target="_blank" rel="noopener">
+      <span class="name"><span class="dot">Th</span> Threads</span><span class="arrow">→</span>
+    </a>
+    <a class="link" href="https://www.tiktok.com/@dr_empi" target="_blank" rel="noopener">
+      <span class="name"><span class="dot">Tk</span> TikTok</span><span class="arrow">→</span>
+    </a>
+    <a class="link" href="https://www.linkedin.com/in/paul-michael-651425201" target="_blank" rel="noopener">
+      <span class="name"><span class="dot">in</span> LinkedIn</span><span class="arrow">→</span>
+    </a>
+    <a class="link" href="https://youtube.com/@drempi3735" target="_blank" rel="noopener">
+      <span class="name"><span class="dot">YT</span> YouTube</span><span class="arrow">→</span>
+    </a>
+    <a class="link" href="https://www.facebook.com/share/19edBNZaeK/" target="_blank" rel="noopener">
+      <span class="name"><span class="dot">Fb</span> Facebook</span><span class="arrow">→</span>
+    </a>
+    <a class="link" href="https://x.com/doctor_empi" target="_blank" rel="noopener">
+      <span class="name"><span class="dot">X</span> X</span><span class="arrow">→</span>
+    </a>
+
+    <footer>Dr Empi · one link for every bio</footer>
+  </main>
+</body>
+</html>
